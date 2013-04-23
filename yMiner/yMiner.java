@@ -39,7 +39,7 @@ public class yMiner extends Script implements Painting {
     
     // STATES
     private enum State {
-        MINING, DROPPING, FLEEING, FINDING
+        MINING, DROPPING, FINDING, FLEEING
     }
     private State CURRENT_STATE = getState();
     private State getState() {
@@ -77,6 +77,7 @@ public class yMiner extends Script implements Painting {
                     break;
                 case DROPPING:
                     drop();
+                    break;
                 case MINING:
                     mine();
                     break;
@@ -128,7 +129,6 @@ public class yMiner extends Script implements Painting {
             sleep(50, 100);
         }
     }
-    
     
     @Override
     // PAINT
